@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect }from "react";
 // import { useEffect } from "react";
@@ -10,6 +11,10 @@ export default function Users( {users}){
 
     return (
         <Layout>
+            <Head>
+                <title>Landing page de User</title>
+                <meta name="desciption" content="curso de nextJs de Webtutoriales" />
+            </Head>
             <Title>users</Title>
             <div className="grid">
                 {users.map(user =>{

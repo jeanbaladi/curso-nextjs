@@ -24,6 +24,8 @@ export default function Navbar(){
                 {`
                     nav {
                         padding-top: 10px;
+                        display: flex;
+                        column-gap: 20px;
                     }
                     a {
                         padding: 0 10px;

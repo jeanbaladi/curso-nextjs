@@ -1,4 +1,4 @@
-// import { useRouter } from "next/router";
+import Head from "next/head";
 import Layout from "../../components/layout";
 import Title from "../../components/title";
 
@@ -7,6 +7,10 @@ export default function post1( {post}) {
     // const router = useRouter();
     return (
         <Layout>
+            <Head>
+                <title>Post #{post.id}</title>
+                <meta name="desciption" content="curso de nextJs de Webtutoriales" />
+            </Head>
             <Title>post details</Title>
             <div className="card">
                 <h2>{title}</h2>

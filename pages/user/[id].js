@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router"
 import Layout from "../../components/layout";
 import Title from "../../components/title";
@@ -5,13 +6,17 @@ import Title from "../../components/title";
 export default function User( {user} ){
 
     const router = useRouter();
-
+    console.log(router);
     if (router.isFallback) {
         return <div>Cargando...</div>
     }
     console.log(router);
     return (
         <Layout>
+            <Head>
+                <title>User #{user.id}</title>
+                <meta name="desciption" content="curso de nextJs de Webtutoriales" />
+            </Head>
             <Title>user ID {user.id}</Title>
             <div className="card">
                 <h3>Name : {user.name}</h3>

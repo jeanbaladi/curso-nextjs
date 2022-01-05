@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Layout from "../../components/layout"
@@ -18,6 +19,10 @@ export default function Post({posts}){
     // }, []);
     return (
         <Layout>
+            {/* <Head>
+                <title>Landing page de Post</title>
+                <meta name="desciption" content="curso de nextJs de Webtutoriales" />
+            </Head> */}
             <Title>post Page</Title>
             <div className="api-res">
                 {posts.map((item) => {
